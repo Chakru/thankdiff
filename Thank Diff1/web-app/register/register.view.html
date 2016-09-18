@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>SignUp | p2p </title>
+    <meta charset="utf-8" />
+</head>
+<body>
+<div class="col-md-6">
+    <h2><b>Registration Page</b></h2>
+
+    <br /><br /><br />
+
+    <form name="form" ng-submit="vm.register()" role="form">
+
+
+        <div class="form-group" ng-class="{ 'has-error': form.firstName.$dirty && form.firstName.$error.required }">
+            <label for="username">Employee Name:</label>
+            <input type="text" placeholder="Enter your full name" name="firstName" id="firstName" class="form-control" ng-model="vm.user.firstName" required />
+            <!--<span ng-show="form.firstName.$dirty && form.firstName.$error.required" class="help-block">First name is required</span>-->
+        </div>
+
+        <!--<div class="form-group" ng-class="{ 'has-error': form.lastName.$dirty && form.lastName.$error.required }">-->
+            <!--<label for="username">Last name</label>-->
+            <!--<input type="text" name="lastName" id="Text1" placeholder="Enter Last Name" class="form-control" ng-model="vm.user.lastName" required />-->
+            <!--<span ng-show="form.lastName.$dirty && form.lastName.$error.required" class="help-block">Last name is required</span>-->
+        <!--</div>-->
+
+        <div class="form-group" ng-class="{ 'has-error': form.email.$dirty && form.email.$error.required }">
+            <label for="username">Email</label>
+            <input type="email" name="email" placeholder="Enter the Email" id="email" class="form-control" ng-model="vm.user.email" required />
+            <!--<span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Username is required</span>-->
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-error': form.Emp.$dirty && form.Emp.$error.required }">
+            <label for="username">Employee I'd</label>
+            <input type="text" name="Empid" class="form-control" id="Empid" ng-model="vm.user.Empid" placeholder="Enter the Employee I'd" required/>
+            <!--<span ng-show="form.Emp.$dirty && form.Emp.$error.reuqired" class="help-block">Employee I'd is required</span>-->
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
+            <label for="username">Username</label>
+            <input type="text" name="username" placeholder="Enter the Username" id="username" class="form-control" ng-model="vm.user.username" required />
+            <!--<span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Username is required</span>-->
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+            <label for="password">Password</label>
+            <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="password should be alpha-numeric containing at least one uppercase and one special character " id="password" placeholder="Enter the Password" class="form-control" ng-model="vm.user.password" required />
+            <!--<span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>-->
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-error': form.confirm_password.$dirty && form.confirm_password.$error.required}">
+            <label for="username">Confirm Password</label>
+            <input type="password" name="confirm_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password should be alpha-numeric containing at least one uppercase and one special character" class="form-control" id="confirm_password" ng-model="vm.user.confirm_password" placeholder="Confirm Password"  required />
+            <!--<span ng-show="form.Cpassword.$dirty && form.Cpassword.$error.reuqired" class="help-block">Confirm the Password</span>-->
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary">Register</button>
+            <img ng-if="vm.dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+            &nbsp;&nbsp;&nbsp;<button type="reset" class="btn btn-link">Reset</button><a href="#/login" class="btn btn-link">Cancel</a>
+        </div>
+    </form>
+</div>
+</body>
+</html>

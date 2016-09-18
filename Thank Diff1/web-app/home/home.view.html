@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+</head>
+<body>
+<div class=""
+<div align="right">
+    <label class="custom-select">
+        <select>
+            <option>&nbsp;{{vm.user.username}}&nbsp;</option>
+            <option>&nbsp;Profile&nbsp;</option>
+            <option>&nbsp;Setting&nbsp;</option>
+            <option><a HREF="home.php">&nbsp;Logout&nbsp;</a></option>
+        </select>
+    </label>
+</div>
+<br><br><br><br><br><br>
+
+<!--<h4>Hi {{vm.user.firstName}} {{vm.user.lastName}}!</h4>-->
+<!--<h3>All registered users:</h3>-->
+<!--<ul>-->
+    <!--<li ng-repeat="user in vm.allUsers">-->
+        <!--{{user.username}} ({{user.Firstname}} {{user.Lastname}})-->
+        <!-- - <a href="#" ng-click="ab.deleteUser(user.id)">Delete</a>-->
+    <!--</li>-->
+<!--</ul>-->
+<!--<p>&nbsp;</p>-->
+<!--<p><a href="#/login" class="btn btn-primary">Logout</a></p>-->
+
+
+
+
+
+<!---->
+<!---->
+
+<!--<h1>Hi {{vm.user.firstName}}!</h1>-->
+<!--<p>You're logged in!! your full name is {{vm.user.fullName}}</p>-->
+<!--<h3>All registered users:</h3>-->
+<!--<ul>-->
+    <!--<li ng-repeat="user in ab.allUsers">-->
+        <!--{{user.username}} ({{user.Firstname}} {{user.Lastname}})-->
+          <!-- - <a href="#" ng-click="vm.deleteUser(user.id)">Delete</a>-->
+    <!--</li>-->
+<!--</ul>-->
+<p>
+    Your Details:<br>
+    your Full name: {{vm.user.firstName}}<br>
+    your email: {{vm.user.email}}<br>
+    your emp id: {{vm.user.Empid}}<br>
+    your username: {{vm.user.username}}<br>
+    your password: {{vm.user.password}}<br>
+
+</p>
+
+
+
+
+<p>&nbsp;</p>
+<p><a href="#/login" class="btn btn-primary">Logout</a></p>
+
+</body>
+</html>
